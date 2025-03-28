@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-vxe%8ey@)r(zq$of6+dsby8tei7^%$=xjy(0tv$km-knd*^sfz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-api.herokuapp.com', 'Josyway.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'Josyway.pythonanywhere.com']
 
 
 # Application definition
@@ -167,8 +167,6 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-SECRET_KEY = os.environ.get("SECRET_KEY")
-
-DEBUG = int(os.environ.get("DEBUG", default=0))
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
