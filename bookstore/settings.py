@@ -27,12 +27,7 @@ SECRET_KEY = "django-insecure-vxe%8ey@)r(zq$of6+dsby8tei7^%$=xjy(0tv$km-knd*^sfz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get(
-    "DJANGO_ALLOWED_HOSTS",
-    "bookstore-production-0799.up.railway.app localhost 127.0.0.1 [::1]"
-).split(" ")
-
-CSRF_TRUSTED_ORIGINS = ["https://bookstore-production-0799.up.railway.app"]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ebac-bookstore-api.herokuapp.com', 'Josyway.pythonanywhere.com']
 
 
 # Application definition
