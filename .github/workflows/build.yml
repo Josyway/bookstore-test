@@ -49,5 +49,6 @@ jobs:
       - name: Start Docker Compose services
         run: docker-compose -f docker-compose.test.yml up -d --build
 
-      - name: Run Tests
-        run: docker-compose exec -T web python manage.py test
+      - name: Test
+        run: | 
+          poetry run python manage.py test
